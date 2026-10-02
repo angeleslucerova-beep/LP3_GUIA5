@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class Contenedor <F, S>{
+	private ArrayList<Par<F, S>> pares = new ArrayList<>();
+
+    public void agregarPar(F primero, S segundo) {
+        pares.add(new Par<>(primero, segundo));
+    }
+
+    public Par<F, S> obtenerPar(int indice) {
+        return pares.get(indice);
+    }
+
+    public ArrayList<Par<F, S>> obtenerTodosLosPares() {
+        return pares;
+    }
+
+    public void mostrarPares() {
+        for (Par<F, S> p : pares) {
+            System.out.println(p);
+        }
+    }
+}
